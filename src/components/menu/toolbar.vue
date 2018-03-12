@@ -12,20 +12,33 @@
       <v-btn icon>
         <v-icon>favorite</v-icon>
       </v-btn>
-      <v-btn icon>
-        <v-icon>more_vert</v-icon>
-      </v-btn>
+    
+      <select v-model="currentLocale">
+    <option v-for="locale in locales" v-bind:value="locale.id" v-on:click="lang(locale.name )">{{locale.name}}</option>
+  </select>
+   
     </v-toolbar>
   </v-card>
 </template>
 
 <script>
+
+
 export default {
   name: 'Toolbar',
   data () {
     return {
+      currentLocale:'fr',
+    locales: [ {id: 'en', name: 'English'}, {id: 'fr', name: 'Français'}]
 
     }
+  },
+  //pass globally the lang var
+  methods: {
+  lang: function (selected) {
+  
+    this.$root.currentLocale = selected
   }
+}
 }
 </script>
