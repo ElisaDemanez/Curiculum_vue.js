@@ -3,8 +3,8 @@
 <v-app light>
 
 <navbar/>
-<toolbar/>
   <v-content>
+<toolbar/>
     <v-container fluid>
       <router-view/>
 
@@ -12,7 +12,7 @@
   </v-content>
 
 
-  <v-footer app>@2018</v-footer> 
+  <!-- <v-footer app>@2018</v-footer>  -->
   </v-app>
   </div>
 </template>

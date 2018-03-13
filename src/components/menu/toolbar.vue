@@ -3,8 +3,7 @@
  <!-- scroll-threshold="100" -->
   <v-card color="grey lighten-4" flat height="200px" tile>
     <v-toolbar dense>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title>Title</v-toolbar-title>
+  
       <v-spacer></v-spacer>
       <v-btn icon>
         <v-icon>search</v-icon>
@@ -14,7 +13,7 @@
       </v-btn>
     
       <select v-model="currentLocale">
-    <option v-for="locale in locales" v-bind:value="locale.id" v-on:click="lang(locale.name )">{{locale.name}}</option>
+    <option v-for="locale in locales" v-bind:value="locale.id" v-on:click="lang(locale.id )">{{locale.name}}</option>
   </select>
    
     </v-toolbar>
